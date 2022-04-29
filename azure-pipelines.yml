@@ -58,6 +58,8 @@ stages:
 
     jobs:
       - job: Setup
+        strategy:
+          maxParallel: 1 # maximum number simultaneous matrix legs to run
         steps:
         - bash: |
             BRANCH=${{ parameters.runtimeBranch }}
@@ -65,6 +67,8 @@ stages:
           displayName: Set Build Name
 
       - job: Runtime
+        strategy:
+          maxParallel: 1 # maximum number simultaneous matrix legs to run
         timeoutInMinutes: 0
         steps:
           - checkout: self
