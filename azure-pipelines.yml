@@ -57,12 +57,12 @@ stages:
       vmImage: 'ubuntu-20.04'
 
     jobs:
-      - job: Setup
-        steps:
-        - bash: |
-            BRANCH=${{ parameters.runtimeBranch }}
-            echo "##vso[build.updatebuildnumber]${BRANCH/\//-}-${RUNCOUNTER}"
-          displayName: Set Build Name
+      # - job: Setup
+      #   steps:
+      #   - bash: |
+      #       BRANCH=${{ parameters.runtimeBranch }}
+      #       echo "##vso[build.updatebuildnumber]${BRANCH/\//-}-${RUNCOUNTER}"
+      #     displayName: Set Build Name
 
       - job: Runtime
         timeoutInMinutes: 0
