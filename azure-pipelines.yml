@@ -23,22 +23,22 @@ resources:
   repositories:
   - repository: runtime
     type: github
-    endpoint: Servarr
+    endpoint: jlenk
     name: dotnet/runtime
     ref: release/6.0
   - repository: aspnetcore
     type: github
-    endpoint: Servarr
+    endpoint: jlenk
     name: dotnet/aspnetcore
     ref: release/6.0
   - repository: sdk
     type: github
-    endpoint: Servarr
+    endpoint: jlenk
     name: dotnet/sdk
     ref: release/6.0.2xx
   - repository: installer
     type: github
-    endpoint: Servarr
+    endpoint: jlenk
     name: dotnet/installer
     ref: release/6.0.2xx
 
