@@ -59,6 +59,7 @@ stages:
     jobs:
       - job: Setup
         strategy:
+          matrix: # matrix strategy
           maxParallel: 1 # maximum number simultaneous matrix legs to run
         steps:
         - bash: |
@@ -68,6 +69,7 @@ stages:
 
       - job: Runtime
         strategy:
+          matrix: # matrix strategy
           maxParallel: 1 # maximum number simultaneous matrix legs to run
         timeoutInMinutes: 0
         steps:
